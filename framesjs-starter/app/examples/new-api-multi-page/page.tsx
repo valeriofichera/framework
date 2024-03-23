@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
       ...(await fetchMetadata(
         new URL(
           "/examples/new-api-multi-page/frames",
-          vercelURL() || "http://localhost:3000"
+          vercelURL() || "http://localhost:3001"
         )
       )),
     },
