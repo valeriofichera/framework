@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Dropdown from './Dropdown';
 
 const FormComponent = () => {
   const [inputValue, setInputValue] = useState('');
@@ -22,16 +23,20 @@ const FormComponent = () => {
     <>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="input-field" className="block text-sm font-medium text-gray-700">Enter a string:</label>
+          <label htmlFor="input-field" className="block text-sm font-medium text-white">Enter wallet address:</label>
           <input
             type="text"
             name="input-field"
             id="input-field"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+            className="text-black mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
             required
           />
+        </div>
+        
+        <div className='flex items-center ml-44'>
+            <Dropdown/>
         </div>
 
         <button
