@@ -24,14 +24,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
   // Fetch data from the API endpoint
   const contractAddress = "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d"; // Default contract address
-  let apiUrl;
-  if (process.env.NODE_ENV === 'development') {
-    // If in development mode (localhost), use http
-    apiUrl = `http://${vercelURL()}/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
-  } else {
-    // Otherwise, use https
-    apiUrl = `https://${vercelURL()}/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
-  }
+  const apiUrl = `${vercelURL()}/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
+  
 
   let data;
   try {
