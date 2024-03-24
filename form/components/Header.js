@@ -14,14 +14,14 @@ const Header = () => {
         {/* Navigation Buttons */}
         <div>
           <Link href="/link1">
-            <a className="hover:text-[#BF45F4] text-white font-light py-2 px-4 rounded mr-2">
+            <button className="hover:text-[#BF45F4] text-white font-light py-2 px-4 rounded mr-2">
               Github
-            </a>
+            </button>
           </Link>
           <Link href="/link2">
-            <a className="hover:text-[#BF45F4] text-white font-light py-2 px-4 rounded">
+            <button className="hover:text-[#BF45F4] text-white font-light py-2 px-4 rounded">
               {/* <Connector/> */} button
-            </a>
+            </button>
           </Link>
         </div>
       </div>
