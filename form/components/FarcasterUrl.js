@@ -1,7 +1,7 @@
 import React from 'react'
 import Clipboard from '@/components/Clipboard.js'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const Url_prefix = "https://framework-u5cy.vercel.app/api/generate-main?page=chart&contractAddress="
 
