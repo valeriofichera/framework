@@ -6,6 +6,8 @@ const NEYNAR_API_KEY = process.env.NEYNAR_API_KEY;
 const GRAPH_APIY_KEY = "5b737725e2782a0b2eb1b081be562306";
 const SUBGRAPH_URL = `https://gateway-arbitrum.network.thegraph.com/api/${GRAPH_APIY_KEY}/subgraphs/id/ECtdoov16DUmk5qbhFx4PVVN7vidiNDwzFNsui6FoHEo`; // Replace with your actual API key
 
+console.log(SUBGRAPH_URL, "SUBGRAPH_URL")
+
 export async function POST(req: NextRequest): Promise<Response> {
     
   let contractAddress = req.nextUrl.searchParams.get('contractAddress');
