@@ -50,17 +50,17 @@ const LineChartComponent = ( {trades}: { trades: Trade[] }) => {
   const maxPrice = Math.max(...trades.map((trade) => parseFloat(trade.priceETH)));
 
   return (
-<div className="flex flex-col relative w-[1000px] h-[630px] justify-center items-center bg-[#15111D] p-4 rounded-lg shadow">
-  <h1 className="text-3xl font-bold text-teal-300 mb-4">Recent NFT Transactions</h1>
-  <div className="flex w-full h-3/4 relative border border-neonPink">
+<div tw="flex flex-col relative w-[1000px] h-[630px] justify-center items-center bg-[#15111D] p-4 rounded-lg shadow">
+  <h1 tw="text-3xl font-bold text-teal-300 mb-4">Recent NFT Transactions</h1>
+  <div tw="flex w-full h-3/4 relative border border-neonPink">
     {/* Y-axis label */}
-    <div className="absolute left-0 top-0 flex flex-col items-end">
-      <span className="mr-2 mt-20 text-white text-lg">ETH Spent</span>
+    <div tw="absolute left-0 top-0 flex flex-col items-end">
+      <span tw="mr-2 mt-20 text-white text-lg">ETH Spent</span>
     </div>
     {/* X-axis label */}
-    <div className="absolute bottom-0 left-0 w-full h-full flex justify-between px-2">
+    <div tw="absolute bottom-0 left-0 w-full h-full flex justify-between px-2">
       {trades.map((trade, index) => (
-        <span key={index} className="text-xs text-gray-500">
+        <span key={index} tw="text-xs text-gray-500">
           {trade.timestamp}
         </span>
       ))}
@@ -69,14 +69,14 @@ const LineChartComponent = ( {trades}: { trades: Trade[] }) => {
     {trades.map((trade, index) => (
       <div
         key={index}
-        className="absolute bottom-0 bg-[#1F1827] h-full flex flex-col items-center justify-end"
+        tw="absolute bottom-0 bg-[#1F1827] h-full flex flex-col items-center justify-end"
         style={{
           left: `${(index / trades.length) * 100}%`,
           height: `${((parseFloat(trade.priceETH) / maxPrice) * 70).toString()}%`,
           width: '35px',
         }}
       >
-        <span className="text-xs text-teal-300 mb-10" style={{ transform: 'rotate(-90deg)', transformOrigin: 'left bottom 0', whiteSpace: 'nowrap' }}>{trade.priceETH}</span>
+        <span tw="text-xs text-teal-300 mb-10" style={{ transform: 'rotate(-90deg)', transformOrigin: 'left bottom 0', whiteSpace: 'nowrap' }}>{trade.priceETH}</span>
       </div>
     ))}
   </div>
