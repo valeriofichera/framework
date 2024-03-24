@@ -50,7 +50,7 @@ const handleRequest = frames(async (ctx) => {
         ),
         buttons: [
           <Button key="nextFrameButton" action="post" target={`/`}>
-            Next frame
+            Woah so much monies
           </Button>,
 
           ///generate-page?page=chart&contractAddress=${contractAddress}

@@ -3,7 +3,7 @@ interface Trade {
   priceETH: number;
 }
 
-const LineChartComponent = ({trades}: { trades: Trade[] }) => {
+const LineChartComponent = ( {trades}: { trades: Trade[] }) => {
 
   console.log(trades, "trades!")
 
