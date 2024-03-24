@@ -24,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   // Fetch data from the API endpoint
   const contractAddress = "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d"; // Default contract address
-  const apiUrl = `${vercelURL()}/api/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
+  const apiUrl = `http://framework-u5cy.vercel.app/api/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
 
 
   let data;

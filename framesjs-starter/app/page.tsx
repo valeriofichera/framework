@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
       ...(await fetchMetadata(
         new URL(
           "/",
-          vercelURL() || "http://localhost:3001"
+          "http://framework-u5cy.vercel.app" || "http://localhost:3001"
         )
       )),
     },

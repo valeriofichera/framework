@@ -39,7 +39,7 @@ const handleRequest = frames(async (ctx) => {
     }
   
 
-    const apiUrl = `${vercelURL()}/api/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
+    const apiUrl = `http://framework-u5cy.vercel.app/api/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
 
   console.log(apiUrl, "apiUrl gerneta main")
 
