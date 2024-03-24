@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Dropdown from './Dropdown';
 
 const FormComponent = () => {
   const [inputValue, setInputValue] = useState('');
@@ -7,9 +6,19 @@ const FormComponent = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const existingEntries = JSON.parse(localStorage.getItem('formEntries')) || [];
-    existingEntries.push(inputValue);
-    localStorage.setItem('formEntries', JSON.stringify(existingEntries));
+    const entry = {
+      id: Date.now(), // Unique ID for the entry, for demonstration
+      content: inputValue,
+    };
+
+    // Send a POST request to the API route
+    await fetch('/api/addresses', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(entry),
+    });
 
     setInputValue('');
     setShowConfirmation(true); // Show confirmation on submit
@@ -34,10 +43,6 @@ const FormComponent = () => {
             required
           />
         </div>
-        
-        <div className='flex items-center ml-44'>
-            <Dropdown/>
-        </div>
 
         <button
           type="submit"
@@ -59,4 +64,3 @@ const FormComponent = () => {
 };
 
 export default FormComponent;
-
