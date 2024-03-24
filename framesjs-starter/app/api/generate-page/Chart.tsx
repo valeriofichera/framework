@@ -72,7 +72,7 @@ const LineChartComponent = ( {trades}: { trades: Trade[] }) => {
             tw="absolute bottom-0 bg-violet-500 h-full flex flex-col items-center justify-end"
             style={{
               left: `${(index / trades.length) * 100}%`,
-              height: `${((parseFloat(trade.priceETH) / maxPrice) * 100).toString()}%`,
+              height: `${((parseFloat(trade.priceETH) / maxPrice) * 70).toString()}%`,
               width: '35px',
             }}
           >
