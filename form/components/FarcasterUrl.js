@@ -10,9 +10,10 @@ function FarcasterUrl({inputValue}) {
 
   console.log(inputValue, "inputValue")
 
-  const completeUrl = Url_prefix + inputValue
+  const completeUrl = Url_prefix.toLowerCase() + inputValue.toLowerCase();
 
   console.log(completeUrl, "completeUrl")
+
 
 
 
