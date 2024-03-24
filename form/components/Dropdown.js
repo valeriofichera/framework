@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState('');
-  const options = ['OpenSea Subgraph', 'Option 2', 'Option 3', 'Option 4'];
+  const options = ['OpenSea v1 NFT by Messari', 'AAVE Subgraph'];
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 

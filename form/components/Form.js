@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 
+import Image from 'next/image';
+import graph from '@/public/graph.svg'
+import Dropdown from './Dropdown';
+
 const FormComponent = () => {
   const [inputValue, setInputValue] = useState('');
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -29,10 +33,41 @@ const FormComponent = () => {
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className='mt-12 mx-44 flex flex-col items-center text-white'>
+
+        <div className='text-lg font-bold mb-12'>
+            Lets create some Charts on Farcaster!
+        </div>
+
+        <div className='flex flex-col items-center'>
+        <div className='text-md font-bold'>
+            Step 1
+        </div>
+        <div className='text-sm font light'>
+            Choose Data Source
+        </div>
+
+        <Dropdown/>
+        <div className='flex flex-row items-center gap-2 my-2 text-sm font light'>
+            powered by
+            <span>
+            <Image src={graph} alt="graph" width={100} />
+            </span>
+        </div>
+        
+        </div>
+
+        <div className='flex flex-col items-center mt-5'>
+        <div className='text-md font-bold'>
+            Step 2
+        </div>
+        <div className='text-sm font light'>
+            Select Parameters
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-4 flex flex-col items-center mt-3">
         <div>
-          <label htmlFor="input-field" className="block text-sm font-medium text-white">Enter wallet address:</label>
+          <label htmlFor="input-field" className="block text-center text-sm font-medium text-white">NFT Contract Address</label>
           <input
             type="text"
             name="input-field"
@@ -51,6 +86,9 @@ const FormComponent = () => {
           Submit
         </button>
       </form>
+        
+        </div>
+
 
       {showConfirmation && (
         <div onClick={handleConfirmationClick} className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center">
@@ -59,7 +97,7 @@ const FormComponent = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
