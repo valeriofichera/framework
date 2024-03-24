@@ -8,13 +8,7 @@ const Url_prefix = "https://framework-u5cy.vercel.app/api/generate-main?page=cha
 
 function FarcasterUrl({inputValue}) {
 
-  const [useCompleteUrl, setCompleteUrl] = useState('')
-
-  useEffect(() => {
-
-    setCompleteUrl(Url_prefix + inputValue)
-    
-  }, [inputValue])
+  const completeUrl = Url_prefix + inputValue
 
 
 
@@ -27,7 +21,7 @@ function FarcasterUrl({inputValue}) {
     </div>
 
     <div className="text-black">
-        <Clipboard text={useCompleteUrl} />
+        <Clipboard text={completeUrl} />
      </div>
     </div>
   )
