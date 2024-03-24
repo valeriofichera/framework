@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import Logo from '@/public/logo.svg'
+import Logo from '@/public/logo.svg';
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -12,16 +13,16 @@ const Header = () => {
 
         {/* Navigation Buttons */}
         <div>
-          <a href="/link1">
+          <Link href="/link1">
             <a className="hover:text-[#BF45F4] text-white font-light py-2 px-4 rounded mr-2">
               Github
             </a>
-          </a>
-          <a href="/link2">
-            <a className=" hover:text-[#BF45F4] text-white font-light py-2 px-4 rounded">
+          </Link>
+          <Link href="/link2">
+            <a className="hover:text-[#BF45F4] text-white font-light py-2 px-4 rounded">
               {/* <Connector/> */} button
             </a>
-          </a>
+          </Link>
         </div>
       </div>
     </header>
