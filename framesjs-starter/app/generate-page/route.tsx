@@ -48,7 +48,7 @@ const handleRequest = frames(async (ctx) => {
             // </span>
         ),
         buttons: [
-          <Button action="post" target={`/generate-page?page=chart&contractAddress=${contractAddress}`}>
+          <Button key="nextFrameButton" action="post" target={`/generate-page?page=chart&contractAddress=${contractAddress}`}>
             Next frame
           </Button>,
         ]
@@ -61,17 +61,18 @@ const handleRequest = frames(async (ctx) => {
           </span>
         ),
         buttons: [
-          <Button action="post" target={`/generate-page?page=price&contractAddress=${contractAddress}`}>
+          <Button key="nextFrameButton2" action="post" target={`/generate-page?page=price&contractAddress=${contractAddress}`}>
             Different Action
           </Button>,
         ]
       };
     default:
       // Handle other pages or provide a default content
-      return {
-        image: <span>Default Page Content</span>,
-        buttons: [<button>Default Button</button>]
-      };
+      return [
+        <Button key="nextFrameButton3" action="post" target={`/generate-page?page=price&contractAddress=${contractAddress}`}>
+          Different Action
+        </Button>,
+      ]
   }
 });
 
