@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { currentURL, vercelURL } from "../utils";
-import { createDebugUrl } from "../debug";
+import { currentURL, vercelURL } from "../../utils";
+import { createDebugUrl } from "../../debug";
 import type { Metadata } from "next";
 import { fetchMetadata } from "frames.js/next";
 import { NextRequest, NextResponse } from 'next/server';
@@ -8,7 +8,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Button, createFrames } from "frames.js/next";
 
 
-import fetchQuery from '../utils/fetchQuery'
+import fetchQuery from '../../utils/fetchQuery'
 
 import LineChartComponent from './Chart'
 

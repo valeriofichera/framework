@@ -1,14 +1,14 @@
 import Link from "next/link";
-import { currentURL, vercelURL } from "../utils";
-import { createDebugUrl } from "../debug";
+import { currentURL, vercelURL } from "../../utils";
+import { createDebugUrl } from "../../debug";
 import type { Metadata } from "next";
 import { fetchMetadata } from "frames.js/next";
 import { NextRequest, NextResponse } from 'next/server';
 
 import { Button } from "frames.js/next";
-import { frames } from "../examples/new-api/frames/frames";
+import { frames } from "../../examples/new-api/frames/frames";
 
-import fetchQuery from '../utils/fetchQuery'
+import fetchQuery from '../../utils/fetchQuery'
 
 
 
