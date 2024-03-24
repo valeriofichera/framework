@@ -4,6 +4,8 @@ import { vercelURL } from "../utils";
 
 const fetchQuery = async (contractAddress : string) => {
 
+  
+
     let apiUrl;
     if (process.env.NODE_ENV === 'development') {
     // If in development mode (localhost), use http
@@ -13,7 +15,7 @@ const fetchQuery = async (contractAddress : string) => {
     apiUrl = `https://${vercelURL()}/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
     }
 
-  
+    console.log(apiUrl, "apiUrl fetchquery")
   let data;
   try {
     const apiResponse = await fetch(apiUrl, {
