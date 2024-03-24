@@ -76,7 +76,7 @@ const LineChartComponent = ( {trades}: { trades: Trade[] }) => {
           width: '35px',
         }}
       >
-        <span tw="text-xs text-teal-300 mb-10" style={{ transform: 'rotate(-90deg)', transformOrigin: 'left bottom 0', whiteSpace: 'nowrap' }}>{trade.priceETH}</span>
+        <span tw="text-lg text-teal-300 mb-10" style={{ transform: 'rotate(-90deg)', transformOrigin: 'left bottom 0', whiteSpace: 'nowrap' }}>{trade.priceETH}</span>
       </div>
     ))}
   </div>
