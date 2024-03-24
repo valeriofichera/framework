@@ -44,7 +44,7 @@ const handleRequest = frames(async (ctx) => {
 
   return {
     image: (
-      <div tw="flex w-full h-full bg-teal-800 p-3">
+      <div tw="flex w-[285px] h-[152px] bg-teal-800 p-3">
 <span tw="bg-gray-900 text-white p-4 rounded-lg">
     <div tw="flex flex-col">
       <div tw="flex bg-blue-700 text-white p-2 rounded-md justify-between items-center">
