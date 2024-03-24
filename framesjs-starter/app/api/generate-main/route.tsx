@@ -79,11 +79,15 @@ const handleRequest = frames(async (ctx) => {
         <div tw="flex w-1/2 justify-end">
           <span>{parseInt(data.data.collection.cumulativeTradeVolumeETH)}</span>
         </div>
+
+        <div tw="flex w-full justify-center">
+  💎🌟💎🌟💎🌟💎🌟💎🌟💎🌟💎🌟💎🌟💎
+     </div>
       </div>
     </div>
   </span>
 
-      <span>💎🌟💎🌟💎🌟💎🌟💎🌟💎🌟💎🌟💎🌟💎</span>
+   
   </div>
 
 
