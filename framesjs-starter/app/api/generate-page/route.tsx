@@ -40,7 +40,7 @@ const handleRequest = frames(async (ctx) => {
             <div tw="flex">
 
             
-            <LineChartComponent />
+            <LineChartComponent trades={data.data.collection.trades} />
 
             </div>
             // <span tw="bg-blue-500 text-white p-4 rounded-lg">

@@ -27,6 +27,8 @@ const handleRequest = frames(async (ctx) => {
 
   console.log(data, "data here")
 
+
+
     // Perform checks to ensure all properties exist
     const name = data.data.collection && data.data.collection.name;
     const symbol = data.data.collection && data.data.collection.symbol;
