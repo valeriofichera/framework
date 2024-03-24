@@ -8,7 +8,11 @@ const Url_prefix = "https://framework-u5cy.vercel.app/api/generate-main?page=cha
 
 function FarcasterUrl({inputValue}) {
 
+  console.log(inputValue, "inputValue")
+
   const completeUrl = Url_prefix + inputValue
+
+  console.log(completeUrl, "completeUrl")
 
 
 

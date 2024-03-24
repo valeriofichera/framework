@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import graph from '@/public/graph.svg'
@@ -8,6 +8,8 @@ import FarcasterUrl from './FarcasterUrl';
 const FormComponent = () => {
   const [inputValue, setInputValue] = useState('');
   const [showConfirmation, setShowConfirmation] = useState(false);
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,9 +25,9 @@ const FormComponent = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(entry),
-    });
+    })
 
-    setInputValue('');
+
     setShowConfirmation(true); // Show confirmation on submit
   };
 
