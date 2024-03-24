@@ -8,7 +8,7 @@ const Url_prefix = "https://framework-u5cy.vercel.app/api/generate-main?page=cha
 
 function FarcasterUrl({inputValue}) {
 
-  [useCompleteUrl, setCompleteUrl] = useState('')
+  const [useCompleteUrl, setCompleteUrl] = useState('')
 
   useEffect(() => {
 
