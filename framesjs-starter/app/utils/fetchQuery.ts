@@ -1,7 +1,7 @@
 import { vercelURL } from "../utils";
 
 const fetchQuery = async (contractAddress: string) => {
-  const apiUrl = `${vercelURL()}/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
+  const apiUrl = `${vercelURL()}/api/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
 
   console.log(apiUrl, "apiUrl fetchquery");
 

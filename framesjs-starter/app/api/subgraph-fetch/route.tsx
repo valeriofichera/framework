@@ -1,6 +1,6 @@
 // import { NEXT_PUBLIC_URL } from '@/app/config';
 import { NextRequest, NextResponse } from 'next/server';
-import { vercelURL } from '../../app/utils';
+import { vercelURL } from '../../utils';
 
 const NEYNAR_API_KEY = process.env.NEYNAR_API_KEY;
 const GRAPH_APIY_KEY = "5b737725e2782a0b2eb1b081be562306";
