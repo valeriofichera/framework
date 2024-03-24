@@ -25,7 +25,7 @@ export async function POST(req: NextRequest): Promise<Response> {
   const query = `
     query BasicAPI {
       collection(
-        id: ${contractAddress}
+        id: "${contractAddress}"
         block: { number_gte: 10 }
         subgraphError: allow
       ) {

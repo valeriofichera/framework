@@ -1,7 +1,24 @@
-import React from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+"use client"
 
-const data = [
+import React from 'react';
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer
+} from 'recharts';
+
+interface DataPoint {
+  nftId: string;
+  eth: number;
+  time: number;
+}
+
+const data: DataPoint[] = [
   {
     nftId: '#12',
     eth: 400,
@@ -41,7 +58,7 @@ const data = [
 
 const LineChartComponent = () => {
   return (
-    <div className="flex justify-center items-center bg-gray-50 p-4 rounded-lg shadow">
+    <div tw="flex justify-center items-center bg-gray-50 p-4 rounded-lg shadow">
       <ResponsiveContainer width="100%" height={300}>
         <LineChart
           data={data}
@@ -55,13 +72,13 @@ const LineChartComponent = () => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="nftId" />
           <YAxis />
-<Tooltip />
-<Legend />
-<Line type="monotone" dataKey="eth" stroke="#8884d8" activeDot={{ r: 8 }} />
-</LineChart>
-</ResponsiveContainer>
-</div>
-);
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="eth" stroke="#8884d8" activeDot={{ r: 8 }} />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
+  );
 };
 
 export default LineChartComponent;

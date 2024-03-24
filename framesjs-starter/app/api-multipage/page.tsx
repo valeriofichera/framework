@@ -9,6 +9,7 @@ const fs = require('fs');
 
 
 
+
 export const dynamic = 'force-dynamic'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -23,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   // Fetch data from the API endpoint
   const contractAddress = "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d"; // Default contract address
-  const apiUrl = `http://localhost:3001/subgraph-fetch?contractAddress="${encodeURIComponent(contractAddress)}"`;
+  const apiUrl = `http://localhost:3001/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
   console.log(apiUrl, "apiUrl");
 
   let data;
@@ -39,15 +40,38 @@ export async function generateMetadata(): Promise<Metadata> {
 
     data = await apiResponse.json();
 
-    fs.writeFile('queryData.json', JSON.stringify(data, null, 2), (err : any) => {
-      if (err) throw err;
-      console.log('Data has been saved to queryData.json');
-    });
     } catch (error) {
       console.error('Error fetching data:', error);
     }
 
-    console.log(data, "data")
+    
+
+    try {
+      const apiResponse = await fetch(`http://localhost:3001/api-multipage/saveFile`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+    
+      if (apiResponse.ok) {
+        console.log('Data has been saved successfully');
+      } else {
+        // If the response is not okay, attempt to parse the response body as JSON
+        let errorMessage = '';
+        try {
+          const errorData = await apiResponse.json();
+          errorMessage = errorData.message || 'Unknown error occurred';
+        } catch (parseError) {
+          errorMessage = `Error parsing server response: ${parseError}`;
+        }
+        console.error('Failed to save data:', errorMessage);
+      }
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+    
 
 
 

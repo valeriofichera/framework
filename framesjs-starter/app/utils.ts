@@ -8,7 +8,7 @@ export function currentURL(pathname: string): URL {
   try {
     return new URL(pathname, `${protocol}://${host}`);
   } catch (error) {
-    return new URL("http://localhost:3000");
+    return new URL("http://localhost:3001");
   }
 }
 
