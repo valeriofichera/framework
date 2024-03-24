@@ -1,16 +1,10 @@
 // import { NEXT_PUBLIC_URL } from '@/app/config';
 import { NextRequest, NextResponse } from 'next/server';
+import { vercelURL } from '../../app/utils';
 
 const NEYNAR_API_KEY = process.env.NEYNAR_API_KEY;
 const GRAPH_APIY_KEY = "5b737725e2782a0b2eb1b081be562306";
 const SUBGRAPH_URL = `https://gateway-arbitrum.network.thegraph.com/api/${GRAPH_APIY_KEY}/subgraphs/id/ECtdoov16DUmk5qbhFx4PVVN7vidiNDwzFNsui6FoHEo`; // Replace with your actual API key
-
-let user = {
-  custody_address: null,
-  username: null,
-  display_name: null,
-  pfp_url: null,
-};
 
 export async function POST(req: NextRequest): Promise<Response> {
     

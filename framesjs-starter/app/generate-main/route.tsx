@@ -37,7 +37,14 @@ const handleRequest = frames(async (ctx) => {
     }
   
 
-
+    let apiUrl;
+  if (process.env.NODE_ENV === 'development') {
+    // If in development mode (localhost), use http
+    apiUrl = `http://${vercelURL()}/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
+  } else {
+    // Otherwise, use https
+    apiUrl = `https://${vercelURL()}/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
+  }
 
   return {
     image: (
@@ -81,7 +88,7 @@ const handleRequest = frames(async (ctx) => {
 
     ),
     buttons: [
-      <Button action="post" key="nextFrameButton" target={`http://localhost:3001/generate-page?page=chart&contractAddress=${contractAddress}`}>
+      <Button action="post" key="nextFrameButton" target={`${apiUrl}&page=chart`}>
         Next frame
       </Button>,
     ]
