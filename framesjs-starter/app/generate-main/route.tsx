@@ -81,7 +81,7 @@ const handleRequest = frames(async (ctx) => {
 
     ),
     buttons: [
-      <Button action="post" target={`http://localhost:3001/generate-page?page=chart&contractAddress=${contractAddress}`}>
+      <Button action="post" key="nextFrameButton" target={`http://localhost:3001/generate-page?page=chart&contractAddress=${contractAddress}`}>
         Next frame
       </Button>,
     ]
