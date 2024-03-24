@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import graph from '@/public/graph.svg'
 import Dropdown from './Dropdown';
+import FarcasterUrl from './FarcasterUrl';
 
 const FormComponent = () => {
   const [inputValue, setInputValue] = useState('');
@@ -90,13 +91,21 @@ const FormComponent = () => {
         </div>
 
 
-      {showConfirmation && (
-        <div onClick={handleConfirmationClick} className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center">
-          <div className="bg-white p-4 rounded-lg shadow-xl">
-            <p className="text-sm font-medium text-gray-700">Form submitted successfully!</p>
-          </div>
-        </div>
-      )}
+        {showConfirmation && (
+  <div 
+    onContextMenu={(e) => {
+      e.preventDefault(); // Prevent the default context menu from showing
+      handleConfirmationClick();
+    }} 
+    className="fixed inset-0 bg-black bg-opacity-90 flex flex-col justify-center items-center"
+  >
+    <div className="bg-white p-4 rounded-lg shadow-xl">
+      <p className="text-sm font-medium text-gray-700">Form submitted successfully!</p>
+    </div>
+    <FarcasterUrl/>
+  </div>
+)}
+
     </div>
   );
 };

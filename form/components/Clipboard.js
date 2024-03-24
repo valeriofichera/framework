@@ -17,7 +17,7 @@ const Clipboard = ({ text }) => {
   };
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex flex-col items-center space-x-2">
       <div
         type="text"
         value={text}
@@ -30,7 +30,7 @@ const Clipboard = ({ text }) => {
 
       <button
         onClick={handleCopy}
-        className={`text-white text-sm font-light py-2 px-4 ${copied ? '' : ''}`}
+        className={`flex flex-col items-center text-white text-sm font-light py-2 px-4 ${copied ? '' : ''}`}
       >
         <Image src={clipboard} alt="Logo" width={50} />
         {copied ? 'Copied!' : 'Copy'}
