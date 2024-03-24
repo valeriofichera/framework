@@ -44,7 +44,7 @@ const handleRequest = frames(async (ctx) => {
 
   return {
     image: (
-      <div tw="relative w-full" style={{ paddingTop: 'calc(100% / 1.91)' }}>
+      <div tw="flex w-full h-[calc(100vw / 1.9)] bg-teal-800 p-3">
          <span tw="flex text-white text-2xl mb-4">NFT collection statistics</span>
 <span tw="bg-gray-900 text-white p-4 rounded-lg">
     <div tw="flex flex-col">
