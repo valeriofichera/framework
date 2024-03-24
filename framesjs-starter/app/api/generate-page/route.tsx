@@ -28,7 +28,7 @@ const handleRequest = frames(async (ctx) => {
   console.log(contractAddress, "contractAddress")
   console.log(page, "page")
 
-  if(contractAddress === undefined) throw new Error("Missing search params")
+  if(contractAddress === undefined || !page) throw new Error("Missing search params")
 
   
   const data = await fetchQuery(contractAddress)
@@ -37,20 +37,22 @@ const handleRequest = frames(async (ctx) => {
     case 'chart':
       return {
         image: (
-            <div tw="flex">
+            // <div tw="flex">
 
             
-            <LineChartComponent />
+            // <LineChartComponent />
 
-            </div>
-            // <span tw="bg-blue-500 text-white p-4 rounded-lg">
-            //     Chart here, supposedly.
-            // </span>
+            // </div>
+            <span tw="bg-blue-500 text-white p-4 rounded-lg">
+                Chart here, supposedly.
+            </span>
         ),
         buttons: [
-          <Button key="nextFrameButton" action="post" target={`/generate-page?page=chart&contractAddress=${contractAddress}`}>
+          <Button key="nextFrameButton" action="post" target={`/`}>
             Next frame
           </Button>,
+
+          ///generate-page?page=chart&contractAddress=${contractAddress}
         ]
       };
     case 'price':

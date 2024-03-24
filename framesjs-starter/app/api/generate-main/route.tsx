@@ -39,9 +39,8 @@ const handleRequest = frames(async (ctx) => {
     }
   
 
-    const apiUrl = `http://framework-u5cy.vercel.app/api/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
 
-  console.log(apiUrl, "apiUrl gerneta main")
+
 
   return {
     image: (
@@ -85,7 +84,7 @@ const handleRequest = frames(async (ctx) => {
 
     ),
     buttons: [
-      <Button action="post" key="nextFrameButton" target={`${apiUrl}&page=chart`}>
+      <Button action="post" key="nextFrameButton" target={`https://framework-u5cy.vercel.app/api/generate-page?page=chart&contractAddress=${contractAddress}`}>
         Next frame
       </Button>,
     ]
