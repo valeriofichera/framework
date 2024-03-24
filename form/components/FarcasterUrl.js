@@ -5,7 +5,6 @@ import Clipboard from '@/components/Clipboard.js'
 function FarcasterUrl() {
   return (
     <div className='flex flex-col items-center mt-1'>
-   
 
     <div className='text-xl font-bold mt-12 mb-5'>
       Frame Url
