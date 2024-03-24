@@ -46,6 +46,8 @@ const handleRequest = frames(async (ctx) => {
     apiUrl = `https://${vercelURL()}/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
   }
 
+  console.log(apiUrl, "apiUrl gerneta main")
+
   return {
     image: (
 <span tw="bg-blue-500 text-white p-4 rounded-lg">
