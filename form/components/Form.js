@@ -102,7 +102,7 @@ const FormComponent = () => {
     <div className="bg-white p-4 rounded-lg shadow-xl">
       <p className="text-sm font-medium text-gray-700">Form submitted successfully!</p>
     </div>
-    <FarcasterUrl/>
+    <FarcasterUrl inputValue={inputValue}/>
   </div>
 )}
 
