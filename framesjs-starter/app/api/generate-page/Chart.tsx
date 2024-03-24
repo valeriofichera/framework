@@ -50,7 +50,7 @@ const LineChartComponent = ( {trades}: { trades: Trade[] }) => {
   const maxPrice = Math.max(...trades.map((trade) => parseFloat(trade.priceETH)));
 
   return (
-    <div tw="flex flex-col relative w-[285px] h-[152px] justify-center items-center bg-gray-900 p-4 rounded-lg shadow">
+    <div tw="flex flex-col relative w-[855px] h-[456px] justify-center items-center bg-gray-900 p-4 rounded-lg shadow">
       <h1 tw="text-3xl font-bold text-teal-300 mb-4">Recent NFT Transactions</h1>
       <div tw="flex w-full h-3/4 relative border border-neonPink">
         {/* Y-axis label */}
