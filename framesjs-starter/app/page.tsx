@@ -11,6 +11,8 @@ import Link from 'next/link';
 
 import { createDebugUrl } from './debug';
 
+import type { Metadata } from "next";
+
 const inter = Inter({ subsets: ['latin'] });
 
 export async function generateMetadata(): Promise<Metadata> {
