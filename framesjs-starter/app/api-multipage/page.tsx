@@ -7,15 +7,17 @@ import { fetchMetadata } from "frames.js/next";
 
 
 
+export const dynamic = 'force-dynamic'
+
 export async function generateMetadata(): Promise<Metadata> {
 
-  let contractAddress = req.nextUrl.searchParams.get('contractAddress');
+  // let contractAddress = req.nextUrl.searchParams.get('contractAddress');
 
-  if (!contractAddress) {
-    throw new Error('Missing search params');
-  }
+  // if (!contractAddress) {
+  //   throw new Error('Missing search params');
+  // }
 
-  console.log(contractAddress, 'contractAddress');
+  // console.log(contractAddress, 'contractAddress');
 
   // Fetch data from the API endpoint
   const contractAddress = "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d"; // Default contract address
