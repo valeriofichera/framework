@@ -37,15 +37,15 @@ const handleRequest = frames(async (ctx) => {
     case 'chart':
       return {
         image: (
-            // <div tw="flex">
+            <div tw="flex">
 
             
-            // <LineChartComponent />
+            <LineChartComponent />
 
-            // </div>
-            <span tw="bg-blue-500 text-white p-4 rounded-lg">
-                Chart here, supposedly.
-            </span>
+            </div>
+            // <span tw="bg-blue-500 text-white p-4 rounded-lg">
+            //     Chart here, supposedly.
+            // </span>
         ),
         buttons: [
           <Button key="nextFrameButton" action="post" target={`/`}>
