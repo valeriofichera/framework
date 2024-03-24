@@ -49,8 +49,12 @@ const handleRequest = frames(async (ctx) => {
             </div>
         ),
         buttons: [
-          <Button key="nextFrameButton" action="post" target={`/`}>
-            Woah so much monies
+          <Button key="previousFrameButton" action="post" target={`https://framework-u5cy.vercel.app/api/generate-main?contractAddress=${contractAddress}`}>
+          Statistics
+        </Button>,
+
+          <Button key="nextFrameButton" action="link" target={`https://etherscan.io/address/${contractAddress}`}>
+            Etherscan
           </Button>,
 
           ///generate-page?page=chart&contractAddress=${contractAddress}

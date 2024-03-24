@@ -45,6 +45,7 @@ const handleRequest = frames(async (ctx) => {
   return {
     image: (
       <div tw="flex w-full h-full bg-teal-800 p-3">
+         <h2 tw="text-white text-2xl mb-4">NFT collection statistics</h2>
 <span tw="bg-gray-900 text-white p-4 rounded-lg">
     <div tw="flex flex-col">
       <div tw="flex bg-blue-700 text-white p-2 rounded-md justify-between items-center">
@@ -87,7 +88,7 @@ const handleRequest = frames(async (ctx) => {
     ),
     buttons: [
       <Button action="post" key="nextFrameButton" target={`https://framework-u5cy.vercel.app/api/generate-page?page=chart&contractAddress=${contractAddress}`}>
-        Next frame
+        Latest transactions
       </Button>,
     ]
   };
