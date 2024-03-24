@@ -4,6 +4,8 @@ import { createDebugUrl } from "../debug";
 import type { Metadata } from "next";
 import { fetchMetadata } from "frames.js/next";
 
+const fs = require('fs');
+
 
 
 
@@ -37,12 +39,16 @@ export async function generateMetadata(): Promise<Metadata> {
 
     data = await apiResponse.json();
 
+    fs.writeFile('queryData.json', JSON.stringify(data, null, 2), (err : any) => {
+      if (err) throw err;
+      console.log('Data has been saved to queryData.json');
+    });
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+
     console.log(data, "data")
 
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    data = {}; // Set empty data if there's an error
-  }
 
 
 
