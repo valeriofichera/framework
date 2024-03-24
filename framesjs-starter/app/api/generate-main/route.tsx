@@ -6,7 +6,6 @@ import { fetchMetadata } from "frames.js/next";
 import { NextRequest, NextResponse } from 'next/server';
 
 import { Button } from "frames.js/next";
-import { frames } from "../../examples/new-api/frames/frames";
 
 import fetchQuery from '../../utils/fetchQuery'
 
@@ -39,7 +38,7 @@ const handleRequest = frames(async (ctx) => {
     }
   
 
-    const apiUrl = `${vercelURL()}/api/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
+    const apiUrl = `https://framework-u5cy.vercel.app/api/subgraph-fetch?contractAddress=${encodeURIComponent(contractAddress)}`;
 
   console.log(apiUrl, "apiUrl gerneta main")
 
