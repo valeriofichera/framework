@@ -57,7 +57,7 @@ const LineChartComponent = () => {
           <YAxis />
 <Tooltip />
 <Legend />
-<Line type="monotone" dataKey="NFT sales in ETH" stroke="#8884d8" activeDot={{ r: 8 }} />
+<Line type="monotone" dataKey="eth" stroke="#8884d8" activeDot={{ r: 8 }} />
 </LineChart>
 </ResponsiveContainer>
 </div>
