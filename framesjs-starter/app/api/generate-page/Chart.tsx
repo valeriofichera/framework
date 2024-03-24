@@ -46,11 +46,13 @@ interface Trade {
 
 const LineChartComponent = ({trades}: { trades: Trade[] }) => {
 
+  console.log(trades, "trades!")
+
   trades.forEach((trade) => {
     console.log(trade, "trade")
   
   })
-  
+
   return (
     <div tw="flex flex-col w-full h-full justify-center items-center bg-gray-900 p-4 rounded-lg shadow">
     <h1 tw="text-3xl font-bold text-teal-300 mb-4">Recent NFT Transactions</h1>
