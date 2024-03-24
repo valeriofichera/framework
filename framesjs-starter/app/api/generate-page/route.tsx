@@ -15,7 +15,7 @@ import LineChartComponent from './Chart'
 
 
 
-export const dynamic = 'force-dynamic'
+
 
 const frames = createFrames({
     basePath: "/generate-page",
@@ -42,10 +42,11 @@ const handleRequest = frames(async (ctx) => {
             
             <LineChartComponent trades={data.data.collection.trades} />
 
+           
+            {/* <span tw="bg-blue-500 text-white p-4 rounded-lg">
+                Chart here, supposedly.
+            </span> */}
             </div>
-            // <span tw="bg-blue-500 text-white p-4 rounded-lg">
-            //     Chart here, supposedly.
-            // </span>
         ),
         buttons: [
           <Button key="nextFrameButton" action="post" target={`/`}>

@@ -25,8 +25,6 @@ const handleRequest = frames(async (ctx) => {
 
   const data = await fetchQuery(contractAddress)
 
-  console.log(data, "data here")
-
 
 
     // Perform checks to ensure all properties exist
