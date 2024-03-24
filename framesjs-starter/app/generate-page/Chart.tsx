@@ -41,7 +41,7 @@ const data = [
 const LineChartComponent = () => {
   return (
     <div tw="flex flex-col w-full h-full justify-center items-center bg-gray-900 p-4 rounded-lg shadow">
-      <h1 tw="text-xl font-bold text-teal-300 mb-4">Recent NFT Transactions</h1>
+      <h1 tw="text-3xl font-bold text-teal-300 mb-4">Recent NFT Transactions</h1>
       <div tw="flex w-full h-3/4 relative border border-neonPink">
         {/* Y-axis label */}
         <div tw="absolute left-0 top-0 flex flex-col items-end">
