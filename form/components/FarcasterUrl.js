@@ -1,12 +1,22 @@
 import React from 'react'
 import Clipboard from '@/components/Clipboard.js'
 
+import { useEffect } from 'react'
+
 const Url_prefix = "https://framework-u5cy.vercel.app/api/generate-main?page=chart&contractAddress="
 
 
 function FarcasterUrl({inputValue}) {
 
-  const complete_url = Url_prefix + inputValue;
+  [useCompleteUrl, setCompleteUrl] = useState('')
+
+  useEffect(() => {
+
+    setCompleteUrl(Url_prefix + inputValue)
+    
+  }, [inputValue])
+
+
 
 
   return (
@@ -17,7 +27,7 @@ function FarcasterUrl({inputValue}) {
     </div>
 
     <div className="text-black">
-        <Clipboard text={complete_url} />
+        <Clipboard text={useCompleteUrl} />
      </div>
     </div>
   )
