@@ -68,11 +68,18 @@ const handleRequest = frames(async (ctx) => {
       };
     default:
       // Handle other pages or provide a default content
-      return [
-        <Button key="nextFrameButton3" action="post" target={`/generate-page?page=price&contractAddress=${contractAddress}`}>
-          Different Action
-        </Button>,
-      ]
+      return {
+        image: (
+          <span>
+            Name : {data.data.collection.name}
+          </span>
+        ),
+        buttons: [
+          <Button key="nextFrameButton3" action="post" target={`/generate-page?page=price&contractAddress=${contractAddress}`}>
+            Different Action
+          </Button>,
+        ]
+      };
   }
 });
 
