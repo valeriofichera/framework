@@ -44,44 +44,44 @@ const handleRequest = frames(async (ctx) => {
 
   return {
     image: (
-      <div tw="flex w-[1000px] h-[630px] bg-teal-800 p-3">
-<span tw="bg-gray-900 text-white p-4 rounded-lg">
-    <div tw="flex flex-col">
-      <div tw="flex bg-blue-700 text-white p-2 rounded-md justify-between items-center">
-        <div tw="flex w-1/2">
-          <span tw="font-bold">Name:</span>
+<div className="flex w-[1000px] h-[630px] p-3 bg-[#15111D]">
+  <span className="text-white p-4 rounded-lg">
+    <div className="flex flex-col">
+      <div className="flex text-white p-2 rounded-md justify-between items-center bg-[#1F1827]">
+        <div className="flex w-1/2">
+          <span className="font-bold">Name:</span>
         </div>
-        <div tw="flex w-1/2 justify-end">
-          <span tw="ml-2">{data.data.collection.name}</span>
-        </div>
-      </div>
-      <div tw="flex bg-indigo-700 text-white p-2 rounded-md mt-2 justify-between items-center">
-        <div tw="flex w-1/2">
-          <span tw="font-bold">Symbol:</span>
-        </div>
-        <div tw="flex w-1/2 justify-end">
-          <span tw="ml-2">{data.data.collection.symbol}</span>
+        <div className="flex w-1/2 justify-end">
+          <span className="ml-2">{data.data.collection.name}</span>
         </div>
       </div>
-      <div tw="flex bg-green-700 text-white p-2 rounded-md mt-2 justify-between items-center">
-        <div tw="flex w-1/2">
-          <span tw="font-bold">Total Supply:</span>
+      <div className="flex text-white p-2 rounded-md mt-2 justify-between items-center bg-[#1F1827]">
+        <div className="flex w-1/2">
+          <span className="font-bold">Symbol:</span>
         </div>
-        <div tw="flex w-1/2 justify-end">
-          <span tw="ml-2">{data.data.collection.totalSupply}</span>
+        <div className="flex w-1/2 justify-end">
+          <span className="ml-2">{data.data.collection.symbol}</span>
         </div>
       </div>
-      <div tw="flex bg-yellow-700 text-white p-2 rounded-md mt-2 justify-between items-center">
-        <div tw="flex w-1/2">
-          <span tw="font-bold">Cumulative Trade Volume (ETH):</span>
+      <div className="flex text-white p-2 rounded-md mt-2 justify-between items-center bg-[#1F1827]">
+        <div className="flex w-1/2">
+          <span className="font-bold">Total Supply:</span>
         </div>
-        <div tw="flex w-1/2 justify-end">
+        <div className="flex w-1/2 justify-end">
+          <span className="ml-2">{data.data.collection.totalSupply}</span>
+        </div>
+      </div>
+      <div className="flex text-white p-2 rounded-md mt-2 justify-between items-center bg-[#1F1827]">
+        <div className="flex w-1/2">
+          <span className="font-bold">Cumulative Trade Volume (ETH):</span>
+        </div>
+        <div className="flex w-1/2 justify-end">
           <span>{parseInt(data.data.collection.cumulativeTradeVolumeETH)}</span>
         </div>
       </div>
     </div>
   </span>
-  </div>
+</div>
 
 
     ),
